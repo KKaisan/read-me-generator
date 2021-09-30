@@ -1,0 +1,24 @@
+{
+  "name": "inquirer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^6.5.2",
+    "util": "^0.12.4"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KKaisan/read-me-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KKaisan/read-me-generator/issues"
+  },
+  "homepage": "https://github.com/KKaisan/read-me-generator#readme"
+}
