@@ -34,11 +34,14 @@ function generateMarkdown(answers) {
 ![badge](https://img.shields.io/badge/license-${answers.license}-brightgreen)
 <br />
 This application is covered by the ${answers.license} license. 
+
 ## Contributing
  ${answers.contribute}
-## Tests
+
+ ## Tests
  ${answers.test}
-## Questions
+
+ ## Questions
  ${answers.issues}<br />
 <br />
 [${answers.username}](https://github.com/${answers.username})<br />

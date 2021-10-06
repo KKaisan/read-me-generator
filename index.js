@@ -68,8 +68,8 @@ var writeFileAsync = util.promisify(fs.writeFile);
 async function init() {
    try {
        const answers = await question();
-       const generateContent = readMe(answers);
-       await writeFileAsync('README.md', generateContent);
+       const content = readMe(answers);
+       await writeFileAsync('./Develop/utils/README.md', content);
        console.log('✔️  Successfully wrote to README.md');
    }   catch(err) {
        console.log(err);
