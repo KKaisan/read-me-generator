@@ -6,7 +6,7 @@ var util = require("util")
 
 // TODO: Create an array of questions for user input
     function question(){
-     inquirer
+    return inquirer
       .prompt([
    {
        type: "input",
@@ -63,20 +63,17 @@ var util = require("util")
 
 // TODO: Create a function to write README file
 
-
+var writeFileAsync = util.promisify(fs.writeFile);
 // TODO: Create a function to initialize app
 async function init() {
-
-var answers = question();
-var content = readMe(answers)
-function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, err => {
-        if (err) {
-            return console.log(err);
-        }
-        console.log('Your markdown file has been created.')
-    });
-}
-}
+   try {
+       const answers = await question();
+       const generateContent = readMe(answers);
+       await writeFileAsync('README.md', generateContent);
+       console.log('✔️  Successfully wrote to README.md');
+   }   catch(err) {
+       console.log(err);
+   }
+ }
 // Function call to initialize app
 init();
